@@ -1,6 +1,6 @@
 # REACT SETUP SCRIPT
 effortless way to set up hello world in react
-
+![hello world](./hello_world.gif)
 
 ---
 ## TO setup
@@ -24,7 +24,11 @@ effortless way to set up hello world in react
 ```
     REACT-SETUP <project-name>
 ```
-2. start up server
+2. cd into project directory
+```
+    cd <project-name>
+```
+3. start up server
 ```
     npm start
 ```
