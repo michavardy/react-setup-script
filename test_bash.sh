@@ -1,0 +1,1 @@
+echo "hello $1 with option: $2"

@@ -19,6 +19,11 @@ effortless way to set up hello world in react
     source ~/.bashrc
 ```
 ---
+
+## Options
+    -h help
+    -s simplified script
+
 ## To Run
 1. run script as a CLI
 ```

@@ -71,12 +71,12 @@ while getopts ":h" option; do
    esac
    case $option in 
     s)
-        Simplify
+        Simplify $1
         exit;;
     esac
 done
 
-Build
+Build $1
 
 
 
