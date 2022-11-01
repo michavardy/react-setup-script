@@ -62,21 +62,23 @@ Build ()
     echo "happy hacking :)"
 }
 
+no_args="true"
 ### handeling options
-while getopts ":h" option; do
+while getopts :h:s: option; do
    case $option in
-      h) # display Help
-         Help
+      h) 
          exit;;
    esac
    case $option in 
     s)
-        Simplify $1
+        Simplify $2
         exit;;
     esac
+    no_args="false"
 done
 
 Build $1
+
 
 
 

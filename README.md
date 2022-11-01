@@ -27,7 +27,7 @@ effortless way to set up hello world in react
 ## To Run
 1. run script as a CLI
 ```
-    REACT-SETUP <project-name>
+    REACT-SETUP <option> <project-name>
 ```
 2. cd into project directory
 ```
