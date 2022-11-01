@@ -32,3 +32,7 @@ effortless way to set up hello world in react
 ```
     npm start
 ```
+4. if react-scripts is not recoginized
+```
+    npm install react-scripts --save
+```
