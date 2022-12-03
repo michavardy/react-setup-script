@@ -1,7 +1,7 @@
 ### functions
 Help()
 {
-   echo "create simple react project"
+   echo "create simple react project: ts"
    echo
    echo "Example: REACT-SETUP <project-name> <options>"
    echo
@@ -94,8 +94,9 @@ no_args="true"
 ### handeling options
 while getopts :h:s:ts: option; do
    case $option in
-      h) 
-         exit;;
+      h)
+        Help 
+        exit;;
    esac
    case $option in 
     s)
