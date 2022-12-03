@@ -10,6 +10,34 @@ Help()
    echo
 }
 
+TypeScript(){
+    echo "creating type-script project"
+    #initializing project
+    echo "creating react project named $1";
+    mkdir ./$1
+    cd ./$1
+    npm init -y
+
+    # entry point
+    mkdir public
+    cp $REACT_SCRIPTED_HOME/README.md ./
+    cp $REACT_SCRIPTED_HOME/include/index_simplified.html ./public/index.html
+    cp $REACT_SCRIPTED_HOME/include/package.json ./
+    # install packages
+    npm install 
+    npm install --save-dev typescript ts-loader
+    # Configuration
+    cp $REACT_SCRIPTED_HOME/include/ts_config/.babelrc ./
+    cp $REACT_SCRIPTED_HOME/include/ts_config/tsconfig.json ./
+    cp $REACT_SCRIPTED_HOME/include/ts_config/webpack.config.js ./
+    # source code hello world
+    mkdir ./src
+    cp $REACT_SCRIPTED_HOME/include/ts_config/index.ts ./src/index.ts
+    # to start
+    echo "write npm start in project root folder to start server"
+    echo "happy hacking :)"
+
+}
 Simplify()
 {
     echo "creating simplified project"
@@ -64,7 +92,7 @@ Build ()
 
 no_args="true"
 ### handeling options
-while getopts :h:s: option; do
+while getopts :h:s:ts: option; do
    case $option in
       h) 
          exit;;
@@ -72,6 +100,11 @@ while getopts :h:s: option; do
    case $option in 
     s)
         Simplify $2
+        exit;;
+    esac
+    case $option in 
+    ts)
+        TypeScript $2
         exit;;
     esac
     no_args="false"
